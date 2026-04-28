@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-bg-dark: #08090a;
+  --color-bg-surface: #0f1115;
+  --color-bg-header: #0c0e12;
+  --color-border-subtle: #1e293b;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-slate-300 font-sans;
+  }
+}
+
+.dark-card {
+  @apply bg-bg-surface border border-border-subtle rounded-xl shadow-2xl;
+}
+
+.dark-input {
+  @apply bg-bg-dark border border-border-subtle rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors;
+}
+
+.dark-button-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm flex items-center justify-center gap-2;
+}
+
+.dark-button-secondary {
+  @apply bg-bg-dark border border-border-subtle hover:border-blue-500 text-slate-300 font-semibold py-2 px-4 rounded-lg transition-colors text-sm flex items-center justify-center gap-2;
+}
